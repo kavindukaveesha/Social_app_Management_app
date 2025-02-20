@@ -8,7 +8,7 @@ class Testing extends StatelessWidget {
     return Scaffold(
       body: SafeArea(
           child: Column(
-        children: [Text("Hello Yaluwe")],
+        children: [Text("Hello Yaluwe.............")],
       )),
     );
   }
