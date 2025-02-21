@@ -1,19 +1,34 @@
-import 'package:Social_Media_Blocker/utils/constants/app_colors.dart'
-    show AppColors;
 import 'package:flutter/material.dart';
 
-class GradientBackground extends StatelessWidget {
+class GradientScaffold extends StatelessWidget {
   final Widget child;
+  final Widget? bottomNavigationBar;
 
-  const GradientBackground({super.key, required this.child});
+  const GradientScaffold({
+    super.key,
+    required this.child,
+    this.bottomNavigationBar,
+  });
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(
-        gradient: AppColors.backgroundGradient,
+      decoration: const BoxDecoration(
+        gradient: LinearGradient(
+          begin: Alignment.topCenter,
+          end: Alignment.bottomCenter,
+          colors: [
+            Color(0xFF02172E),
+            Color(0xFF020E1B),
+          ],
+          stops: [0.0, 0.5],
+        ),
       ),
-      child: child,
+      child: Scaffold(
+        backgroundColor: Colors.transparent,
+        bottomNavigationBar: bottomNavigationBar,
+        body: child,
+      ),
     );
   }
 }
