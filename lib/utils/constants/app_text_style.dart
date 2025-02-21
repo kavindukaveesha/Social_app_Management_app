@@ -1,5 +1,6 @@
+import 'package:Social_Media_Blocker/utils/constants/app_colors.dart'
+    show AppColors;
 import 'package:flutter/material.dart';
-import 'package:social_app_manegment_app/styles/constants/app_colors.dart';
 
 class AppTextStyle {
   // Headings

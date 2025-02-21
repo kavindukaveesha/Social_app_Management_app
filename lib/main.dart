@@ -1,5 +1,7 @@
+import 'package:Social_Media_Blocker/app.dart' show App;
 import 'package:flutter/material.dart';
-import 'package:social_app_manegment_app/testing.dart';
+
+import 'utils/themes/app_theme.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,8 +13,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
-      home: const Testing(),
+      debugShowCheckedModeBanner: false,
+      title: 'Productivity App',
+      theme: AppTheme.darkTheme,
+      home: const App(),
     );
   }
 }
